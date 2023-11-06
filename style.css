@@ -1,3 +1,8 @@
+body {
+  background-image: url(https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+}
 header {
   display: flex;
   justify-content: center;
@@ -14,6 +19,7 @@ h1 {
   height: 120px;
   border-radius: 50%;
   overflow: hidden;
+  box-shadow: 7px 10px 52px 43px rgba(0, 0, 0, 0.1);
 }
 
 .title-img img {
@@ -29,7 +35,10 @@ form {
 }
 
 button {
-  padding: 0.5rem 2rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 20px;
+  border-color: transparent;
+  box-shadow: 7px 10px 52px 43px rgba(0, 0, 0, 0.1);
 }
 
 .input-box {
@@ -40,7 +49,19 @@ label,
 input {
   width: 100%;
 }
-
+label {
+  font-size: 18px;
+}
+input {
+  border-radius: 10px;
+  border-color: transparent;
+  margin-top: 0.2rem;
+}
 article {
   margin-top: 3rem;
+}
+
+li {
+  font-size: 20px;
+  font-weight: bold;
 }
