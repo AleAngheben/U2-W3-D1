@@ -51,8 +51,8 @@ class Pet {
     this.species = species;
     this.breed = breed;
   }
-  static sameOwner(pet1, pet2) {
-    if (pet1.ownerName === pet2.ownerName) {
+  sameOwner(comparePet) {
+    if (this.ownerName === comparePet.ownerName) {
       console.log(true);
     } else {
       console.log(false);
@@ -74,8 +74,8 @@ petForm.addEventListener("submit", function (event) {
   const species = document.getElementById("species").value;
   const breed = document.getElementById("breed").value;
 
-  const pet = new Pet(petName, ownerName, species, breed);
-  pets.push(pet);
+  const myPet = new Pet(petName, ownerName, species, breed);
+  pets.push(myPet);
 
   myList();
 
@@ -84,26 +84,20 @@ petForm.addEventListener("submit", function (event) {
 
 function myList() {
   petList.innerHTML = " ";
-  pets.forEach(function (pet) {
+  pets.forEach(function (myPet) {
     const myLi = document.createElement("li");
     myLi.textContent =
       "Pet name = " +
-      pet.petName +
+      myPet.petName +
       " , " +
       "Owner name = " +
-      pet.ownerName +
+      myPet.ownerName +
       " , " +
       "Species = " +
-      pet.species +
+      myPet.species +
       " , " +
       "Breed = " +
-      pet.breed;
+      myPet.breed;
     petList.appendChild(myLi);
   });
-}
-
-for (let i = 0; i < pets.length; i++) {
-  for (let j = i + 1; j < pets.length; j++) {
-    Pet.sameOwner(i, j);
-  }
 }
